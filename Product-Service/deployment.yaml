@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-service
+  template:
+    metadata:
+      labels:
+        app: product-service
+    spec:
+      imagePullSecrets:
+        - name: authcred
+      containers:
+        - name: product-service
+          image: didin8080/product
+          ports:
+            - containerPort: 8002
+          env:
+            - secretRef:
+                name: product-env
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "200m"
+            requests:
+              memory: "512Mi"
+              cpu: "500m"

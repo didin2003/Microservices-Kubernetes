@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cart-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cart-service
+  template:
+    metadata:
+      labels:
+        app: cart-service
+    spec:
+      imagePullSecrets:
+        - name: authcred
+      containers:
+        - name: cart-service
+          image: didin8080/cart
+          ports:
+            - containerPort: 8003
+          env:
+            - secretRef:
+                name: cart-env
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "200m"
+            requests:
+              memory: "512Mi"
+              cpu: "500m"

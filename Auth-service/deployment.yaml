@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      imagePullSecrets:
+        - name: authcred
+      containers:
+        - name: auth-service
+          image: didin8080/auth
+          ports:
+            - containerPort: 8001
+          env:
+            - secretRef:
+                name: auth-env
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "200m"
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
