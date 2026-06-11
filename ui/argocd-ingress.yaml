@@ -3,8 +3,11 @@ kind: Ingress
 metadata:
   name: argocd-ingress
   namespace: argocd
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
-  ingressClassName: traefik
+  ingressClassName: alb
   rules:
     - host: argocd.didin.in
       http:
