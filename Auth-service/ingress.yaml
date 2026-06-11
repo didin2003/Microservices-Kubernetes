@@ -8,7 +8,7 @@ metadata:
     alb.ingress.kubernetes.io/group.name: microservices
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/certificate-arn: YOUR_ACM_ARN
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:328837371751:certificate/be9a6329-668b-469c-8d0a-d12caa237d74
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: '443'
 
