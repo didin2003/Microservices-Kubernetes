@@ -13,7 +13,7 @@ spec:
         app: product-service
     spec:
       imagePullSecrets:
-        - name: authcred
+        - name: productcred
       containers:
         - name: product-service
           image: didin8080/product:1
