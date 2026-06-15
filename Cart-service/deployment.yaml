@@ -19,7 +19,7 @@ spec:
           image: didin8080/cart:2
           ports:
             - containerPort: 8003
-          env:
+          envFrom:
             - secretRef:
                 name: cart-env
           resources:
