@@ -21,7 +21,7 @@ spec:
             - containerPort: 8002
           env:
             - secretRef:
-                name: product-env
+                name: productenv
           resources:
             limits:
               memory: "256Mi"
