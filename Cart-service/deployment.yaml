@@ -23,9 +23,9 @@ spec:
             - secretRef:
                 name: cart-env
           resources:
-            limits:
-              memory: "256Mi"
-              cpu: "200m"
-            requests:
-              memory: "512Mi"
-              cpu: "500m"
+              requests:
+                cpu: "200m"
+                memory: "256Mi"
+              limits:
+                cpu: "500m"
+                memory: "512Mi"
