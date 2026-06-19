@@ -19,7 +19,7 @@ spec:
   - host: cart.didin.in
     http:
       paths:
-      - path: /
+      - path: /api/cart/
         pathType: Prefix
         backend:
           service:
