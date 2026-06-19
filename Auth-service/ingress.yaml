@@ -18,7 +18,7 @@ spec:
   - host: auth.didin.in
     http:
       paths:
-      - path: /
+      - path: /api/auth/
         pathType: Prefix
         backend:
           service:
