@@ -19,7 +19,7 @@ spec:
   - host: orders.didin.in
     http:
       paths:
-      - path: /
+      - path: /api/orders/
         pathType: Prefix
         backend:
           service:
