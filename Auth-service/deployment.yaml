@@ -16,7 +16,7 @@ spec:
         - name: authcred
       containers:
         - name: auth-service
-          image: didin8080/auth:9
+          image: didin8080/auth:10
           ports:
             - containerPort: 8001
           envFrom:
