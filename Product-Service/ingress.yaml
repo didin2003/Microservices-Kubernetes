@@ -26,3 +26,10 @@ spec:
             name: product-service
             port:
               number: 80
+      - path: /admin/  
+        pathType: Prefix
+        backend:
+          service:
+            name: product-service
+            port:
+              number: 80
