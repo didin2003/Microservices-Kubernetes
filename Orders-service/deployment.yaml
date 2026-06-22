@@ -23,7 +23,6 @@ spec:
             - secretRef:
                 name: order-env
           resources:
-            limits:
               requests:
                 cpu: "200m"
                 memory: "256Mi"
