@@ -13,7 +13,7 @@ spec:
         app: cart-service
     spec:
       imagePullSecrets:
-        - name: authcred
+        - name: cartcred
       containers:
         - name: cart-service
           image: didin8080/cart:4
